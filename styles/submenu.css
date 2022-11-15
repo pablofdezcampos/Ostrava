@@ -1,0 +1,143 @@
+/* GLOBAL */
+
+:root{
+    
+    /* Fonts */
+    --mainFont: Arial, Helvetica, sans-serif;
+
+    /* Colors */
+    --white: #ffffff;
+    --black: #000000;
+    --ligthBlack: #252932;
+    --grey: #e1e1e1;
+    --darkGrey: #5e5e5e5e;
+    --orange: #ff8000;
+    --red: #ff0000;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body{
+    font-family: var(--mainFont);
+    line-height: 2;  
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+ul, li{
+    list-style: none;
+}
+
+/* SUBMENU */
+
+header{
+    width: 100%;
+    background: var(--ligthBlack);
+}
+
+.navegation{
+    margin: 0 auto;
+}
+
+.navegation a{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 15px 50px;
+}
+
+.menu li a:hover{
+    color: var(--orange);
+    transition: all .5s;
+}
+
+.submenu{
+    position: absolute;
+    background: var(--ligthBlack);
+    width: 110%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity;
+}
+
+.submenu li a{
+    display: block;
+    /* width: 200px; */
+    margin: auto 0;
+    padding: 20px;
+    color: var(--white);
+}
+
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* COUNTER */
+main label{
+    font-size: 20rem;
+    display: block;
+    text-align: center;
+
+}
+
+.center{
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button{
+    width: 30%;
+    height: 150px;
+    margin: auto 30px;
+    background-color: var(--orange);
+    color: var(--black);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 2rem;
+    margin-top: 20px;
+}
+
+@media (max-width: 2000px) {
+    .center{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 100px;
+    } 
+
+    button{
+        width: 95%;
+    }
+}

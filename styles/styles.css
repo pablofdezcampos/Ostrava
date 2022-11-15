@@ -115,7 +115,7 @@ a.button-primary{
 hr.solid {
     border-top: 3px solid #bbb;
     margin: 50px;
-  }
+}
 
 /* HEADER */
 header{
@@ -251,6 +251,16 @@ header nav a{
     font-size: 1.5rem;
 }
 
+.container h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.container p{
+    font-size: 2rem;
+}
+
 /* ADVERTS */
 .adverts{
     list-style: none;
@@ -354,60 +364,69 @@ header nav a{
     margin: 0 auto;
 }
 
+.container-center h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 .form{
-    background-color: var(--darkGrey);
+    background-color: var(--ligthBlack);
     border-radius: 2rem;
     padding: 2rem;
 }
 
 .form legend{
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: bold;
     margin-bottom: 2rem;
-    color: var(--black);
+    color: var(--white);
     text-align: center;
 }
 
 .field{
-    margin-bottom: 1rem;
+    margin: 1.5rem;
 }
 
 .field label{
     margin-bottom: 1rem;
     font-weight: bold;
-    color: var(--black);
+    color: var(--white);
+    font-size: 2rem;
 }
 
 .input-text{
     width: 97%;
-    padding: 0.5rem;
+    padding: 1rem;
     border: none;
     border-radius: 2rem;
 }
 
+input::placeholder{
+    font-size: 1.5rem;
+}
+
 .field textarea{
     height: 20rem;
-    width: 97%;
+    width: 98%;
 }
 
 .button{
-    background-color: var(--grey);
+    background-color: var(--orange);
     color: var(--black);
     padding: 1rem 3rem;
     margin-top: 4rem;
     font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    width: 80%;
-    border: none;
     border-radius: 2rem;
 }
 
 .send .button{
     width: 100%;
-    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 /* FOOTER */
@@ -430,6 +449,7 @@ header nav a{
 .footer-col{
     width: 25%;
     padding: 0 15px;
+    text-align: center;
 }
 
 .footer-col h3{
@@ -444,7 +464,7 @@ header nav a{
 .footer-col h3::before{
     content: '';
 	position: absolute;
-	left:0;
+	left: 1;
 	bottom: -2px;
 	background-color: var(--orange);
 	height: 3px;

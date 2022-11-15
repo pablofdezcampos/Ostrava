@@ -33,3 +33,22 @@ function formValidation(event){
 
     this.submit();
 }
+
+
+//Counter Program
+let count = 0;
+
+document.getElementById('descreaseButton').onclick = function(){
+    count -= 1;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+document.getElementById('resetButton').onclick = function(){
+    count = 0;
+    document.getElementById('countLabel').innerHTML = count;
+}
+
+document.getElementById('increaseButton').onclick = function(){
+    count += 1;
+    document.getElementById('countLabel').innerHTML = count;
+}
