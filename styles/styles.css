@@ -1,0 +1,559 @@
+/* GLOBAL */
+
+:root{
+    
+    /* Fonts */
+    --mainFont: Arial, Helvetica, sans-serif;
+
+    /* Colors */
+    --white: #ffffff;
+    --black: #000000;
+    --ligthBlack: #252932;
+    --grey: #e1e1e1;
+    --darkGrey: #5e5e5e5e;
+    --orange: #ff8000;
+    --red: #ff0000;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body{
+    font-family: var(--mainFont);
+    line-height: 2;  
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    font-family: var(--mainFont);
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+h4{
+    font-size: 1rem;
+}
+
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+ul, li{
+    list-style: none;
+}
+
+/* UTILITIES */
+.no-margin{
+    margin: 0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.center-content{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* COMPONENTS */
+/* It is necesary to put the element a before the class 
+   cause of in the general settings we put that the 
+   element a will have no decoration 
+ */
+a.button{
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+    border: none;
+}
+ 
+a.button-primary{
+    background-color: var(--black);
+    color: var(--white);
+} 
+
+.button:hover{
+    cursor: pointer;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+    margin: 50px;
+  }
+
+/* HEADER */
+header{
+    width: 100%;
+    overflow: hidden;
+    background: var(--ligthBlack);
+    margin-bottom: 20px;
+}
+
+.header_logo{
+    color: var(--white);
+    font-size: 4rem;
+    line-height: 200px;
+    float: left;
+    text-transform: uppercase;
+    margin-left: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header_span{
+    color: var(--orange);
+}
+
+/* HEADER NAV MENU */
+header nav{ 
+    float: right;
+    line-height: 220px;
+    margin-right: 40px;
+}
+
+header nav a{
+    color: var(--white);
+    /* text-decoration: underline; */
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu__link{
+    font-family: var(--mainFont);
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.menu__link:hover{
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 20px;
+    /* Transition effect */
+    -webkit-transition: all 1000ms ease;
+    -o-transition: all 1000ms ease;
+    transition: all 1000ms ease;
+}
+
+/* AUTOMATIC SLIDER */
+.slider-frame{
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;    
+}
+
+.slider-frame ul{ 
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    /* Animation (20s is the time of the animation, every image takes 5s to change) */
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+.slider-frame img{
+    width: 100%;
+}
+
+@keyframes slide{
+    0%{margin-left: 0%;}
+    20%{margin-left: 0%;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    95%{margin-left: -300%;}
+}
+
+/* NEWS/ARTICLE */
+
+.title{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 3rem;   
+}
+
+.container{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 3rem;
+}
+
+.entry{
+    border-bottom: .1rem solid var(--grey);
+    margin-top: 50px;
+}
+
+.entry:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.entry_title{
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.entry_content p{
+    font-size: 1.5rem;
+}
+
+/* ADVERTS */
+.adverts{
+    list-style: none;
+}
+
+.advert_title{
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* GALLERY */
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    margin: auto;
+    gap: 15px;
+    overflow: hidden;
+}
+
+.gallery img{
+    width: 100%;
+    height: 500px;
+    vertical-align: top;
+    object-fit: cover;
+    /* To make the transition of the image */
+    transition: transform .5s;
+}
+
+.gallery > a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+}
+
+/* Animation of the images */
+.gallery a:hover img{
+    /* filter:blur for the distorsion of the img */
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.5);
+}
+
+/* FULL IMAGE */
+.ligth-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    transition: transform .3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+
+.ligth-box img{
+    width: 95vh;
+    height: 75vh;
+}
+
+/* Animation to catch the full image */
+.ligth-box:target{
+    transform: scale(1);
+}
+
+/* classes for the icons, left arrow, rigth arrow and close button */
+.close{
+    display: inline-block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.next{
+    display: block;
+    background-color: var(--red);
+    color: var(--white);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* CONTACT FORM */
+.container-center{
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.form{
+    background-color: var(--darkGrey);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.form legend{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.field{
+    margin-bottom: 1rem;
+}
+
+.field label{
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+.input-text{
+    width: 97%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.field textarea{
+    height: 20rem;
+    width: 97%;
+}
+
+.button{
+    background-color: var(--grey);
+    color: var(--black);
+    padding: 1rem 3rem;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 80%;
+    border: none;
+    border-radius: 2rem;
+}
+
+.send .button{
+    width: 100%;
+    align-items: center;
+}
+
+/* FOOTER */
+.footer{
+    background-color: var(--ligthBlack);
+    padding: 70px 0;
+    margin-top: 50px;
+}
+
+.footer-container{
+    max-width: 95%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h3{
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: bold;
+    position: relative;
+}
+
+.footer-col h3::before{
+    content: '';
+	position: absolute;
+	left:0;
+	bottom: -2px;
+	background-color: var(--orange);
+	height: 3px;
+	box-sizing: border-box;
+	width: 100px;    
+}
+
+.footer-col a{
+    font-size: 1.75rem;
+	text-transform: capitalize;
+	color: var(--white);
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--white);
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-col a:hover{
+	color: var(--white);
+	padding-left: 8px;
+}
+
+.footer-col .social-links a{
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	background-color: var(--orange);
+	margin:0 10px 10px 0;
+    text-align: center;
+    font-size: 1.5rem;
+	line-height: 50px;
+	border-radius: 50%;
+	color: var(--white);
+	transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+	color: var(--ligthBlack);
+	background-color: var(--white);
+}
+
+.center-text{
+    color: var(--white);
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* REPONSIVE BEHAVIOUR */
+@media (max-width: 950px) {
+    /* HEADER */
+    header{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+    
+    /* GALLERY */
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* FOOTER */
+    .row{
+        text-align: center;
+    }
+
+    .footer-col{
+      width: 50%;
+      margin: auto;
+    }
+
+    .footer-col h3::before{
+       width: 0;
+    }
+
+    .footer-col h3{
+        color: var(--orange);
+    }
+}
+
+@media (min-width: 768px) {
+    /* NEWS */
+    .button-primary{
+        display: flex;
+        width: 25rem;
+        justify-content: center;
+    }
+
+    .main-content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }   
+
+    /* ADVERTS */
+    .advert-widget{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* FOOTER */
+    .footer-col{
+        width: 100%;
+        margin: auto;
+    }
+}
