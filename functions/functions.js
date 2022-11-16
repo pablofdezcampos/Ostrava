@@ -34,6 +34,8 @@ function formValidation(event){
     this.submit();
 }
 
+//Gallery Picker
+
 
 //Counter Program
 let count = 0;
