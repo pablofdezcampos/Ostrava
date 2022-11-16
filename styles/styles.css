@@ -427,6 +427,7 @@ input::placeholder{
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
+    color: var(--white);
 }
 
 /* FOOTER */
