@@ -430,6 +430,29 @@ input::placeholder{
     color: var(--white);
 }
 
+/* JSON SECTION */
+h3{
+    text-align: center;
+}
+
+
+.json{
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 200;
+    color: var(--black);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,1); 
+    margin: auto;
+}
+
+/* CHART SECTION */
+.chart{
+    margin: 200px;
+}
+
 /* FOOTER */
 .footer{
     background-color: var(--ligthBlack);
@@ -571,7 +594,13 @@ input::placeholder{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { 
+    /* GRAPHIC SECTION */
+    .chart{
+        margin: 0 auto;
+        display: flex;
+    }
+    
     /* FOOTER */
     .footer-col{
         width: 100%;
