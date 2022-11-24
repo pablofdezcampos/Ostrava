@@ -1,6 +1,6 @@
 # Ostrava
 # Description
-- Imitation page of Ostrava.
+- Imitation page of Ostrava for a student project.
 
 # Technologies 
 - HTML5 and CSS to the fronted view.
