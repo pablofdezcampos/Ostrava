@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <script src="https://kit.fontawesome.com/76ad8a7d7b.js" crossorigin="anonymous"></script>
     <title>Ostrava Map - Manuel García</title>
-
 </head>
 
-<body>
+<body onload="startTime()">
 
-    <header class="no-margin no-padding">
+    <header class=" no-margin no-padding">
 
         <!-- Header Component -->
         <div class="header_logo center-content">
@@ -28,7 +27,16 @@
 
     </header>
 
-    <div id="chartContainer" class="chart" style="height: 770px; width: 80%;"></div>
+    <!-- Clock Section -->
+    <div id="clockdate">
+        <div class="clockdate-wrapper">
+            <div id="clock"></div>
+            <div id="date"></div>
+        </div>
+    </div>
+
+    <!-- Chart Section -->
+    <div id="chartContainer" style="height: 780px; width: 80%;" class="chart"></div>
 
     <!-- Footer Component -->
     <footer class="footer">
@@ -71,8 +79,9 @@
             <p> Manuel García Alonso - Presentation is educational student's project</p>
         </div>
 
-        <script src="/functions/json.js"></script>
+        <script src="/functions/graphic.js"></script>
         <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+        <script src="../../functions/time.js"></script>
 
 </body>
 
